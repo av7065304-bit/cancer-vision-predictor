@@ -1,0 +1,6 @@
+{
+  "name": "CancerVision AI",
+  "description": "CancerVision AI is a production-ready, portfolio-grade healthcare application showcasing AI-powered medical image analysis, multi-model oncology ensemble dashboards, tumor segmentation simulations, clinic-grade patient record management, and localized medical assistant chatbots.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

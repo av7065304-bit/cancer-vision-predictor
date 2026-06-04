@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "MedicalScan": {
+      "title": "MedicalScan",
+      "description": "A clinical patient cancer detection scan result",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "patientName": { "type": "string" },
+        "patientAge": { "type": "integer" },
+        "patientSex": { "type": "string", "enum": ["M", "F", "Other"] },
+        "scanType": { "type": "string" },
+        "cancerType": { "type": "string" },
+        "date": { "type": "string" },
+        "fileName": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "status": { "type": "string", "enum": ["Analyzed", "Pending"] },
+        "prediction": { "type": "string" },
+        "confidence": { "type": "number" },
+        "riskLevel": { "type": "string", "enum": ["High", "Medium", "Low"] },
+        "findings": { "type": "array" },
+        "recommendations": { "type": "array" },
+        "segmentationPoints": { "type": "string" },
+        "gradCamUrl": { "type": "string" },
+        "reasoning": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["id", "patientName", "patientAge", "patientSex", "scanType", "cancerType", "date", "imageUrl", "prediction", "confidence", "riskLevel"]
+    }
+  },
+  "firestore": {
+    "scans/{scanId}": {
+      "schema": "MedicalScan",
+      "description": "Collection of all medical cancer scans"
+    }
+  }
+}
